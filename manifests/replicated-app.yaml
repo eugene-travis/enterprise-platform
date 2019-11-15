@@ -1,0 +1,15 @@
+---
+apiVersion: kots.io/v1beta1
+kind: Application
+metadata:
+  name: myapp-enterprise
+spec:
+  title: My Great App
+  icon: https://image.flaticon.com/icons/svg/199/199594.svg
+  releaseNotes: |
+    This is a great new version of my app!
+  ports:
+    - serviceName: "example-nginx"
+      servicePort: 80
+      localPort: 80
+      applicationUrl: "http://example-nginx"
